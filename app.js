@@ -14,7 +14,8 @@ var app = express();
 {
   // 设置 Mongoose 连接
   const mongoose = require('mongoose');
-  const mongoDB = process.env.MONGODB_URI || 'mongodb://localhost:27017/memoro';
+  // 'mongodb://localhost:27017/memoro'
+  const mongoDB = process.env.MONGODB_URI || 'mongodb://admin:123456@120.53.15.157:27017/admin';
   mongoose.connect(mongoDB);
   mongoose.Promise = global.Promise;
   const db = mongoose.connection;

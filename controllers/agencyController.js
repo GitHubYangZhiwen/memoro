@@ -1,4 +1,4 @@
-const Agency = require('../models/Agency');
+const Agency = require('../models/agency');
 const async = require('async');
 
 // 增加TODO
@@ -19,7 +19,7 @@ exports.addAgency = [function (req, res, next) {
         // Successful
         Agency
             .findById(agency._id)
-            .populate('type')
+            // .populate('type')
             .exec(function (err, result) {
                 res.jsonp({
                     status: 0,
